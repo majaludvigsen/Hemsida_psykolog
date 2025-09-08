@@ -1,48 +1,36 @@
-/* Grundläggande stil */
+/* ====== GOOGLE FONTS ====== */
+/* Glöm inte att länka dessa i <head> i HTML:
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+*/
+
+/* ====== BASSTILAR ====== */
 body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #333;
+    color: #2e2e2e;
     background-color: #f9f9f9;
 }
 
 h1, h2 {
-    color: #007acc;
+    font-family: 'Playfair Display', serif;
+    color: #2b6777;
     text-align: center;
-}
-
-header.hero {
-    background-color: #e6f2f8;
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-section {
-    padding: 3rem 2rem;
-    max-width: 800px;
-    margin: auto;
-    background-color: #fff;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-ul {
-    list-style: disc;
-    padding-left: 2rem;
+    margin-top: 0;
 }
 
 a {
-    color: #007acc;
+    color: #2b6777;
     text-decoration: none;
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    background-color: #f0f0f0;
-    color: #555;
+a:hover {
+    text-decoration: underline;
 }
+
+/* ====== HERO / HEADER ====== */
+header.hero {
+    background: linear-gradient(135deg, #dff6ff, #b4d4ff); /* Eller använd en bild: se nedan */
+    padding: 5rem 2rem;
+    text-align: center;
