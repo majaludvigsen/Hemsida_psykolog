@@ -27,13 +27,14 @@ body{
   padding:1rem 1.25rem;
   background:var(--paper);
   border-bottom:1px solid #dfe8e4;
+  color:var(--ink);
 }
 
 .brand{
   display:flex;
   align-items:center;
   gap:.6rem;
-  color:var(--accent);
+  color:var(--ink);
 }
 .brand .flower{
   width:72px; height:36px;
@@ -43,6 +44,9 @@ body{
   font-weight:600;
   letter-spacing:.02em;
   font-size:1.7rem;
+}
+.site-header .flower{
+  color:var(--ink);
 }
 .header-decor {
   display: flex;
