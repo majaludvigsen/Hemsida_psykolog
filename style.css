@@ -55,10 +55,11 @@ body{
 .header-decor .flower{
   width:24px; height:24px;
 }
-.header-decor .line {
+.header-decor .wave {
   flex: 1;
-  height: 1px;
-  background: linear-gradient(to right, transparent, currentColor, transparent);
+  height: 16px;
+  width: 100%;
+  display: block;
 }
 .header-decor .site-title {
   font-family: "Playfair Display", Georgia, serif;
