@@ -61,7 +61,7 @@ body{
 }
 .header-decor .wave {
   flex: 1;
-  height: 20px;
+  height: 32px;
   width: 100%;
   display: block;
 }
