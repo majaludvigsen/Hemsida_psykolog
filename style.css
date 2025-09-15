@@ -61,11 +61,12 @@ body{
   width: 100%;
   display: block;
 }
-.header-decor .site-title {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin: 0 8px;
+.header-decor .site-title{
+  font-family:"Cormorant Garamond", serif;
+  font-weight:600;
+  letter-spacing:.02em;
+  font-size:1.7rem;
+  margin:0;
 }
 
 
