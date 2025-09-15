@@ -52,38 +52,27 @@ body{
   border:0; margin:0;
 }
 
-/* Desktop nav with hover dropdown */
+/* Desktop navigation */
 .nav{ display:none; }
 @media (min-width:840px){
   .nav{ display:block; }
 }
 
 .menu{
-  list-style:none; margin:0; padding:0; display:flex; gap:1rem;
+  list-style:none; margin:0; padding:0; display:flex; gap:1.5rem;
 }
 .menu-link{
-  display:inline-block; padding:.5rem .75rem; border-radius:999px;
+  display:inline-block; padding:.5rem .9rem; border-radius:999px;
   text-decoration:none; color:var(--ink);
   border:1px solid transparent;
+  font-family:"Manrope", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  font-weight:600;
+  font-size:1rem;
 }
-.menu-link:hover{ border-color:var(--ring); background:var(--mist); }
-
-/* Dropdown */
-.has-dropdown{ position:relative; }
-.dropdown{
-  position:absolute; right:0; top:calc(100% + .4rem);
-  display:none; min-width:210px;
-  background:var(--paper);
-  border:1px solid #dfe8e4;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
-  border-radius:16px; padding:.5rem;
+.menu-link:hover,
+.menu-link[aria-current="page"]{
+  border-color:var(--ring); background:var(--mist);
 }
-.dropdown a{
-  display:block; padding:.6rem .8rem; border-radius:12px;
-  color:var(--ink); text-decoration:none;
-}
-.dropdown a:hover{ background:var(--mist); }
-.has-dropdown:hover .dropdown{ display:block; }
 
 /* Mobile hamburger & drawer (CSS only) */
 .nav-toggle{ display:none; }
@@ -109,6 +98,7 @@ body{
 .mobile-drawer a{
   display:block; padding:.7rem .9rem; text-decoration:none; color:var(--ink);
   border-radius:12px;
+  font-weight:600;
 }
 .mobile-drawer a:hover{ background:var(--mist); }
 .nav-toggle:checked ~ .mobile-drawer{ display:block; }
