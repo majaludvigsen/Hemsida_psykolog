@@ -44,26 +44,27 @@ body{
   letter-spacing:.02em;
   font-size:1.7rem;
 }
-.header-decor{
-  display:flex;
-  align-items:center;
-  gap:.6rem;
-  color:var(--accent);
+.header-decor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 1.5rem 0;
+  color: #444;
 }
 .header-decor .flower{
   width:24px; height:24px;
 }
-.header-decor .line{
-  flex:1;
-  height:1px;
-  background:var(--sage);
+.header-decor .line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, currentColor, transparent);
 }
-.header-decor .site-title{
-  font-family:"Cormorant Garamond", serif;
-  font-weight:600;
-  letter-spacing:.02em;
-  font-size:1.7rem;
-  margin:0;
+.header-decor .site-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0;
 }
 
 
