@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Välkommen, denna sida är under utveckling</title>
+  <title>Om Maja</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
@@ -20,7 +20,6 @@
     <span class="brand-text">Välkommen, denna sida är under utveckling</span>
   </div>
 
-  <!-- Desktop meny -->
   <nav class="nav">
     <ul class="menu">
       <li class="menu-item has-dropdown">
@@ -35,7 +34,6 @@
     </ul>
   </nav>
 
-  <!-- Mobil hamburger -->
   <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Öppna meny">
   <label for="nav-toggle" class="hamburger" aria-hidden="true">
     <span></span><span></span><span></span>
@@ -50,26 +48,22 @@
 
 <hr class="divider" aria-hidden="true">
 
-<main class="container">
-  <article class="intro">
-    <h1>Psykologtjänster </h1>
+<section class="section">
+  <div class="section-inner">
+    <h2>Om Maja</h2>
     <p>
-      Här kommer texten vara… En kort introduktion om mottagningen,
-      arbetssätt och hur man kan ta kontakt.
+      Jag är legitimerad psykolog med bred yrkeserfarenhet från flera olika verksamhetsområden – bland annat neuropsykiatri, elevhälsa, digital psykologmottagning inom primärvården samt arbete inom social sektor i kommunala verksamheter.<br><br>
+I mitt nuvarande arbete inom kommunen ansvarar jag bland annat för handledning och utbildning av personal. Jag har också lång erfarenhet av att ge stöd vid kris, arbeta med stressrelaterad ohälsa samt erbjuda föräldrastöd.<br><br>
+Utöver mitt psykologarbete har jag en bakgrund inom sjöfart och segling, och var under några år även engagerad i Svenska Sjöräddningssällskapet – något som har gett mig värdefulla perspektiv på ledarskap, samarbete och att möta människor i utsatta situationer.<br><br>
     </p>
-    <p>
-      Välkommen att höra av dig.
-    </p>
-    <a class="cta" href="kontakt.html">Boka samtal</a>
-  </article>
-</main>
+  </div>
+</section>
 
 <footer class="site-footer">
   <p>&copy; <span id="year"></span> Maja Ludvigsen.</p>
 </footer>
 
 <script>
-  // Uppdatera årtal i foten
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
