@@ -53,12 +53,6 @@ body{
 .header-decor .flower{
   width:24px; height:24px;
 }
-.header-decor .wave {
-  flex: 1;
-  height: 32px;
-  width: 100%;
-  display: block;
-}
 .header-decor .site-title{
   font-family:"Cormorant Garamond", serif;
   font-weight:600;
