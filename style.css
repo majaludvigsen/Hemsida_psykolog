@@ -46,7 +46,7 @@ body{
   font-size:1.7rem;
 }
 .site-header .flower{
-  color:var(--ink);
+  color:var(--accent);
 }
 .header-decor {
   display: flex;
@@ -54,7 +54,7 @@ body{
   justify-content: center;
   gap: 12px;
   margin: 1.5rem 0;
-  color:var(--ink);
+  color:var(--accent);
 }
 .header-decor .flower{
   width:24px; height:24px;
@@ -71,7 +71,7 @@ body{
   letter-spacing:.02em;
   font-size:1.7rem;
   margin:0;
-  color:var(--ink);
+  color:var(--accent);
 }
 
 
