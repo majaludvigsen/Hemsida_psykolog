@@ -244,6 +244,26 @@ body{
   border-radius:22px;
 }
 
+.profile-portrait .portrait-placeholder{
+  display:grid;
+  place-items:center;
+  aspect-ratio: 8 / 9;
+  width:100%;
+  margin:0 auto;
+  border-radius:22px;
+  border:2px dashed #cfe1d9;
+  background:linear-gradient(145deg, #f4faf7 0%, #e2efe7 100%);
+  color:var(--accent);
+  font-weight:600;
+  padding:1.5rem;
+}
+
+.profile-portrait .portrait-placeholder span{
+  font-family:"Cormorant Garamond", serif;
+  font-size:1.2rem;
+  text-align:center;
+}
+
 .profile-portrait figcaption{
   margin-top:1rem;
   font-weight:600;
