@@ -46,7 +46,10 @@
     <p>
       Mejla <a href="mailto:kontakt@majaludvigsen.com ">kontakt@majaludvigsen.com</a>.
     </p>
-    <form class="contact-form" action="#" method="post">
+    <form class="contact-form" action="https://formsubmit.co/kontakt@majaludvigsen.com" method="post">
+      <input type="hidden" name="_subject" value="Nytt meddelande via hemsidan" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
       <label>
         Namn
         <input type="text" name="namn" placeholder="Ditt namn" required>
@@ -57,9 +60,10 @@
       </label>
       <label>
         Meddelande
-        <textarea name="msg" rows="5" placeholder="Vad vill du ha hjälp med?"></textarea>
+        <textarea name="message" rows="5" placeholder="Vad vill du ha hjälp med?" required></textarea>
       </label>
-   <button type="submit">Skicka</button>
+      <button type="submit">Skicka</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
@@ -68,5 +72,58 @@
   <p>Senast uppdaterad: 2025-09-22</p>
 </footer>
 
+<script>
+  (function () {
+    const form = document.querySelector('.contact-form');
+    const statusEl = document.querySelector('.form-status');
+
+    if (!form || !statusEl) return;
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    const endpoint = 'https://formsubmit.co/ajax/kontakt@majaludvigsen.com';
+
+    const setStatus = (message, variant) => {
+      statusEl.textContent = message;
+      statusEl.className = `form-status${variant ? ` form-status--${variant}` : ''}`;
+    };
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      setStatus('Skickar...', 'pending');
+      if (submitButton) {
+        submitButton.disabled = true;
+      }
+
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+          throw new Error('Något gick fel');
+        }
+
+        form.reset();
+        setStatus('Tack! Ditt meddelande har skickats.', 'success');
+      } catch (error) {
+        console.error(error);
+        setStatus('Det gick inte att skicka formuläret just nu. Försök igen senare eller mejla oss direkt.', 'error');
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+        }
+      }
+    });
+  })();
+</script>
 </body>
 </html>

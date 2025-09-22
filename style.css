@@ -204,6 +204,23 @@ body{
 }
 .contact-form button:hover{ filter:brightness(.95); }
 
+.form-status{
+  font-weight:600;
+  min-height:1.25rem;
+}
+
+.form-status--pending{
+  color:var(--accent);
+}
+
+.form-status--success{
+  color:#2f6b4f;
+}
+
+.form-status--error{
+  color:#8b1c26;
+}
+
 /* Footer */
 .site-footer{
   text-align:center; color:#4b6058; padding:2rem 1rem; font-size:.95rem;
