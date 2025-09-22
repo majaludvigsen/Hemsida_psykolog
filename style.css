@@ -181,7 +181,8 @@ body{
 .section-inner{
   max-width:960px; margin:0 auto; padding:3rem 1.25rem;
 }
-.section h2{
+.section h2,
+.section-title{
   font-family:"Cormorant Garamond", serif;
   font-weight:600; margin:0 0 .8rem;
 }
