@@ -124,33 +124,82 @@ body{
 .nav-toggle:checked ~ .mobile-drawer{ display:block; }
 
 /* Layout */
-.container{
-  display:grid;
-  grid-template-columns: 1fr;
-  gap:2rem;
-  max-width:1080px;
-  margin:2rem auto;
-  padding:0 1.25rem;
-}
-@media (min-width:960px){
-  .container{
-    grid-template-columns: minmax(0, 1.2fr) 0.8fr;
-    align-items:start;
-  }
-}
-
-.intro h1{
-  font-family:"Cormorant Garamond", serif;
-  font-weight:600; letter-spacing:.01em;
-  margin:0 0 .6rem; font-size:clamp(1.6rem, 2vw + 1rem, 2.4rem);
-}
-.intro p{ margin:.6rem 0; }
 .cta{
   display:inline-block; margin-top:1rem;
   background:var(--accent); color:white; text-decoration:none;
   padding:.7rem 1.1rem; border-radius:999px; font-weight:600;
 }
 .cta:hover{ filter:brightness(.95); }
+.cta.ghost{
+  background:transparent;
+  color:var(--accent);
+  border:1px solid var(--accent);
+  margin-left:.75rem;
+}
+.cta.ghost:hover{
+  background:rgba(109, 143, 128, 0.1);
+}
+
+/* Hero */
+.hero{
+  background:linear-gradient(135deg, #f4f9f6 0%, #ffffff 60%);
+  border-bottom:1px solid #e0ece6;
+}
+.hero-inner{
+  max-width:1080px;
+  margin:0 auto;
+  padding:3.5rem 1.25rem 3rem;
+  display:grid;
+  gap:2rem;
+  align-items:center;
+}
+@media (min-width:960px){
+  .hero-inner{
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  }
+}
+.hero-eyebrow{
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  font-size:.75rem;
+  color:var(--accent);
+  margin:0 0 1rem;
+}
+.hero-copy h2{
+  font-family:"Cormorant Garamond", serif;
+  font-weight:600;
+  font-size:clamp(2rem, 2.5vw + 1rem, 3rem);
+  margin:.3rem 0 1rem;
+}
+.hero-copy p{
+  margin:0 0 1.2rem;
+  max-width:46ch;
+}
+.hero-actions{ display:flex; flex-wrap:wrap; align-items:center; }
+.hero-actions .cta{ margin-top:0; margin-right:.75rem; }
+.hero-figure{
+  justify-self:center;
+  text-align:center;
+}
+.hero-figure img{
+  width:100%;
+  height:auto;
+  max-width:340px;
+  border-radius:24px;
+  box-shadow:0 20px 45px rgba(28, 43, 40, 0.18);
+}
+.hero-figure figcaption{
+  margin-top:.75rem;
+  font-size:.95rem;
+  color:var(--accent);
+}
+
+.section-lead{
+  font-size:1.05rem;
+  max-width:60ch;
+  margin:0 0 2rem;
+}
 
 /* Side card (låda till höger, enligt skiss) */
 .side-card{
@@ -194,9 +243,173 @@ body{
   color:var(--accent);
 }
 
+.section h4{
+  font-family:"Cormorant Garamond", serif;
+  font-weight:600;
+  margin:0 0 .5rem;
+  color:var(--accent);
+}
+
+.service-area{
+  display:grid;
+  gap:1.75rem;
+  margin-top:3rem;
+}
+
+.service-area:first-of-type{
+  margin-top:2.5rem;
+}
+
 .profile-grid{
   display:grid;
   gap:2.5rem;
+}
+
+.card-grid{
+  display:grid;
+  gap:1.5rem;
+}
+@media (min-width:900px){
+  .card-grid{
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+  }
+}
+.service-card{
+  background:var(--paper);
+  border:1px solid #dfe8e4;
+  border-radius:18px;
+  padding:1.5rem;
+  box-shadow:0 12px 24px rgba(28, 43, 40, 0.04);
+}
+.service-card h3,
+.service-card h4{
+  margin-top:0;
+  font-size:1.35rem;
+}
+.service-card p{
+  margin:.5rem 0 1.1rem;
+  min-height:4.5rem;
+}
+.service-card ul{
+  padding-left:1.1rem;
+  margin:0;
+  display:grid;
+  gap:.35rem;
+}
+.audience-grid{
+  display:grid;
+  gap:2rem;
+}
+@media (min-width:900px){
+  .audience-grid{
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+  }
+}
+.audience-grid h3,
+.audience-grid h4{
+  margin-top:0;
+}
+.audience-grid ul{
+  margin:0;
+  padding-left:1.1rem;
+  display:grid;
+  gap:.4rem;
+}
+
+.process{
+  display:grid;
+  gap:2.5rem;
+}
+.process-steps{
+  counter-reset:step;
+  display:grid;
+  gap:1.5rem;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.process-steps li{
+  background:var(--paper);
+  border:1px solid #dfe8e4;
+  border-radius:18px;
+  padding:1.5rem 1.5rem 1.5rem 4.25rem;
+  position:relative;
+  box-shadow:0 12px 24px rgba(28, 43, 40, 0.05);
+}
+.process-steps li::before{
+  counter-increment:step;
+  content:counter(step);
+  position:absolute;
+  top:1.4rem;
+  left:1.5rem;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:var(--accent);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:600;
+}
+.process-steps h3,
+.process-steps h4{
+  margin:0 0 .4rem;
+}
+.process-steps p{
+  margin:0;
+}
+.process-cta{
+  background:#f4f8f5;
+  border:1px solid #dfe8e4;
+  border-radius:18px;
+  padding:1.8rem 1.5rem;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:1rem;
+  justify-content:space-between;
+}
+.process-cta p{
+  margin:0;
+  font-size:1.05rem;
+  font-weight:500;
+}
+
+@media (min-width:760px){
+  .process{
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* 404 */
+.not-found{
+  min-height:calc(100vh - 260px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:3rem 1.25rem 4rem;
+  background:linear-gradient(160deg, #f6fbf8 0%, #ffffff 70%);
+}
+.not-found-inner{
+  max-width:560px;
+  text-align:center;
+  background:var(--paper);
+  border-radius:24px;
+  padding:3rem 2.5rem;
+  border:1px solid #dfe8e4;
+  box-shadow:0 20px 40px rgba(28, 43, 40, 0.08);
+}
+.not-found-inner h1{
+  font-family:"Cormorant Garamond", serif;
+  font-size:clamp(2rem, 1.5vw + 1.5rem, 2.6rem);
+  margin:0 0 1rem;
+}
+.not-found-inner p{
+  margin:0 0 1.5rem;
+}
+.not-found .hero-actions{
+  justify-content:center;
 }
 
 @media (min-width:960px){
@@ -343,6 +556,59 @@ body{
   padding:.7rem 1.1rem; border-radius:999px; font-weight:700; cursor:pointer;
 }
 .contact-form button:hover{ filter:brightness(.95); }
+.contact-form .cta{ margin-top:0; }
+
+.contact-layout{
+  display:grid;
+  gap:2.5rem;
+}
+
+.contact-primary{
+  display:grid;
+  gap:1.5rem;
+}
+
+.contact-aside{
+  display:grid;
+  gap:1.5rem;
+}
+
+.contact-links{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:.65rem;
+}
+
+.contact-links a{
+  color:var(--accent);
+  font-weight:600;
+  text-decoration:none;
+}
+
+.contact-links a:hover,
+.contact-links a:focus{
+  color:#4e6a5d;
+}
+
+.contact-steps{
+  margin:0;
+  padding-left:1.25rem;
+  display:grid;
+  gap:.75rem;
+}
+
+.contact-steps li{
+  line-height:1.5;
+}
+
+@media (min-width:920px){
+  .contact-layout{
+    grid-template-columns:minmax(0, 1fr) minmax(240px, 0.65fr);
+    align-items:start;
+  }
+}
 
 .form-status{
   font-weight:600;

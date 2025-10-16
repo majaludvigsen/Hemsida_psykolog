@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sidan kunde inte hittas</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-decor">
+      <img class="header-logo" src="header-logo.png" alt="Turkos vågform" width="160" height="160" />
+      <h1 class="site-title">Maja Ludvigsen</h1>
+    </div>
+
+    <nav class="nav" aria-label="Huvudmeny">
+      <ul class="menu">
+        <li><a href="index.html" class="menu-link">Hem</a></li>
+        <li><a href="om-mig.html" class="menu-link">Om mig</a></li>
+        <li><a href="tjanster.html" class="menu-link">Tjänster</a></li>
+        <li><a href="kontakt.html" class="menu-link">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Öppna meny">
+    <label for="nav-toggle" class="hamburger" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </label>
+    <nav class="mobile-drawer" aria-label="Mobilmeny">
+      <a href="index.html">Hem</a>
+      <a href="om-mig.html">Om mig</a>
+      <a href="tjanster.html">Tjänster</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <main class="not-found" aria-labelledby="not-found-title">
+    <div class="not-found-inner">
+      <p class="hero-eyebrow">Fel 404</p>
+      <h1 id="not-found-title">Oj! Den sidan verkar ha flyttat på sig.</h1>
+      <p>
+        Länken du följde fungerar inte längre eller så har sidan bytt plats. Använd menyn för att fortsätta eller hör av dig så hjälper jag dig rätt.
+      </p>
+      <div class="hero-actions">
+        <a class="cta" href="index.html">Till startsidan</a>
+        <a class="cta ghost" href="kontakt.html">Kontakta mig</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Senast uppdaterad: 2025-10-17</p>
+  </footer>
+</body>
+</html>

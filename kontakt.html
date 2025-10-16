@@ -42,34 +42,62 @@
 
 <section class="section">
   <div class="section-inner">
-    <h2>Kontakt</h2>
-    <p>
-      Mejla <a href="mailto:kontakt@majaludvigsen.com ">kontakt@majaludvigsen.com</a>.
-    </p>
-    <form class="contact-form" action="https://formsubmit.co/kontakt@majaludvigsen.com" method="post">
-      <input type="hidden" name="_subject" value="Nytt meddelande via hemsidan" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_captcha" value="false" />
-      <label>
-        Namn
-        <input type="text" name="namn" placeholder="Ditt namn" required>
-      </label>
-      <label>
-        E-post
-        <input type="email" name="email" placeholder="namn@mail.se" required>
-      </label>
-      <label>
-        Meddelande
-        <textarea name="message" rows="5" placeholder="Vad vill du ha hjälp med?" required></textarea>
-      </label>
-      <button type="submit">Skicka</button>
-      <p class="form-status" role="status" aria-live="polite"></p>
-    </form>
+    <div class="contact-layout">
+      <div class="contact-primary">
+        <h2>Kontakt</h2>
+        <p class="section-lead">
+          Fyll i formuläret eller mejla direkt om du vill boka en konsultation, handledning eller workshop för dig, ditt team
+          eller din organisation.
+        </p>
+        <p>
+          Berätta kort om ert sammanhang och vilken typ av stöd du söker så återkommer jag inom två arbetsdagar med
+          förslag på nästa steg.
+        </p>
+
+        <form class="contact-form" action="https://formsubmit.co/kontakt@majaludvigsen.com" method="post">
+          <input type="hidden" name="_subject" value="Nytt meddelande via hemsidan" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <label>
+            Namn
+            <input type="text" name="namn" placeholder="Ditt namn" required>
+          </label>
+          <label>
+            E-post
+            <input type="email" name="email" placeholder="namn@mail.se" required>
+          </label>
+          <label>
+            Meddelande
+            <textarea name="message" rows="5" placeholder="Beskriv kort vad du vill ha hjälp med" required></textarea>
+          </label>
+          <button type="submit" class="cta">Skicka meddelande</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <aside class="contact-aside" aria-label="Alternativa kontaktvägar och nästa steg">
+        <div class="profile-card">
+          <h3>Kontakta mig direkt</h3>
+          <ul class="contact-links">
+            <li><a href="mailto:kontakt@majaludvigsen.com">kontakt@majaludvigsen.com</a></li>
+          </ul>
+        </div>
+
+        <div class="profile-card">
+          <h3>När du hör av dig</h3>
+          <ol class="contact-steps">
+            <li>Jag bekräftar din förfrågan och föreslår tider för ett introduktionssamtal.</li>
+            <li>Vi utforskar behov, mål och möjliga upplägg på 30 minuter digitalt.</li>
+            <li>Du får en tydlig återkoppling med rekommendationer och nästa steg.</li>
+          </ol>
+        </div>
+      </aside>
+    </div>
   </div>
 </section>
 
 <footer class="site-footer">
-  <p>Senast uppdaterad: 2025-09-22</p>
+  <p>Senast uppdaterad: 2025-10-17</p>
 </footer>
 
 <script>
@@ -116,7 +144,7 @@
         setStatus('Tack! Ditt meddelande har skickats.', 'success');
       } catch (error) {
         console.error(error);
-        setStatus('Det gick inte att skicka formuläret just nu. Försök igen senare eller mejla oss direkt.', 'error');
+        setStatus('Det gick inte att skicka formuläret just nu. Försök igen senare eller mejla mig direkt.', 'error');
       } finally {
         if (submitButton) {
           submitButton.disabled = false;
