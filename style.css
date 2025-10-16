@@ -556,6 +556,59 @@ body{
   padding:.7rem 1.1rem; border-radius:999px; font-weight:700; cursor:pointer;
 }
 .contact-form button:hover{ filter:brightness(.95); }
+.contact-form .cta{ margin-top:0; }
+
+.contact-layout{
+  display:grid;
+  gap:2.5rem;
+}
+
+.contact-primary{
+  display:grid;
+  gap:1.5rem;
+}
+
+.contact-aside{
+  display:grid;
+  gap:1.5rem;
+}
+
+.contact-links{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:.65rem;
+}
+
+.contact-links a{
+  color:var(--accent);
+  font-weight:600;
+  text-decoration:none;
+}
+
+.contact-links a:hover,
+.contact-links a:focus{
+  color:#4e6a5d;
+}
+
+.contact-steps{
+  margin:0;
+  padding-left:1.25rem;
+  display:grid;
+  gap:.75rem;
+}
+
+.contact-steps li{
+  line-height:1.5;
+}
+
+@media (min-width:920px){
+  .contact-layout{
+    grid-template-columns:minmax(0, 1fr) minmax(240px, 0.65fr);
+    align-items:start;
+  }
+}
 
 .form-status{
   font-weight:600;
