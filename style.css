@@ -117,8 +117,7 @@ h4{
   letter-spacing: 0.01em; /* Optional: tweak for menu style */
   /* keep other styles as they are */
 }
-.menu-link:hover,
-.menu-link[aria-current="page"]{
+.menu-link:hover {
   border-color:var(--ring); background:var(--mist);
 }
 
