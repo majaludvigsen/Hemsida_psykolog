@@ -175,12 +175,12 @@ h4{
 .hero-inner{
   max-width:1080px;
   margin:0 auto;
-  padding:3rem 8vw;
+  padding:3rem 3vw 3rem 8vw;
   display:grid;
   gap:2rem;
   align-items:center;
 }
-@media (min-width:960px){
+@media (min-width:700px){
   .hero-inner{
     grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
   }
@@ -696,10 +696,6 @@ h4{
 
   .site-title{
     font-size:1.55rem;
-  }
-
-  .hero-inner{
-    padding:2.75rem 1.25rem 2.75rem;
   }
 
   .hero-actions{
