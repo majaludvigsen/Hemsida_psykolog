@@ -194,6 +194,9 @@ h4{
   color:var(--accent);
   margin:0 0 1rem;
 }
+.hero-copy {
+  margin: 0 auto;
+}
 .hero-copy h2{
   font-family:"Cormorant Garamond", serif;
   font-weight:600;
