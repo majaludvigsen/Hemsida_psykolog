@@ -252,7 +252,7 @@ h4{
 .side-card a:hover{ background:var(--mist); }
 
 /* Sections */
-.section{
+.section{ 
   background:var(--paper);
   border-top:1px solid #e6eeea;
   border-bottom:1px solid #e6eeea;
@@ -260,6 +260,33 @@ h4{
 .section.alt{ background:#f7faf8; }
 .section-inner{
   max-width:960px; margin:0 auto; padding:3rem 8vw;
+}
+.resource-intro{
+  display:grid;
+  gap:2.5rem;
+  margin-top:1.5rem;
+  align-items:center;
+}
+@media (min-width:820px){
+  .resource-intro{
+    grid-template-columns:minmax(0, 1fr) minmax(220px, 320px);
+  }
+}
+.resource-illustration{
+  justify-self:center;
+  text-align:center;
+}
+.resource-illustration img{
+  width:100%;
+  height:auto;
+  max-width:340px;
+  border-radius:24px;
+  box-shadow:0 18px 40px rgba(28, 43, 40, 0.16);
+}
+.resource-illustration figcaption{
+  margin-top:.75rem;
+  font-size:.95rem;
+  color:var(--accent);
 }
 .section h2,
 .section-title{
