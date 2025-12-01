@@ -10,11 +10,11 @@
 *{ box-sizing:border-box; }
 html,body{ margin:0; padding:0; }
 body{
-  font-family:"Manrope", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   color:var(--ink);
   background:var(--mist);
   line-height:1.6;
-  font-weight:350;
+  font-weight:400;
   font-size:clamp(1rem, 0.98rem + 0.25vw, 1.1rem);
 }
 
@@ -62,9 +62,9 @@ h4{
   color:var(--ink);
 }
 .brand-text{
-  font-family:"Cormorant Garamond", serif;
-  font-weight:800;
-  letter-spacing:.02em;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  font-weight:750;
+  letter-spacing:.01em;
   font-size:1.8rem;
 }
 .header-decor {
@@ -82,9 +82,9 @@ h4{
   width:24px; height:24px;
 }
 .header-decor .site-title{
-  font-family:"Cormorant Garamond", serif;
-  font-weight:600;
-  letter-spacing:.02em;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  font-weight:650;
+  letter-spacing:.01em;
   font-size:1.7rem;
   margin:0;
   color:var(--accent);
@@ -111,11 +111,10 @@ h4{
   display:inline-block; padding:.5rem .9rem; border-radius:12px;
   text-decoration:none; color:var(--ink);
   border:1px solid transparent;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 600;
-  font-size: 1.1rem; /* Optional: tweak for readability */
-  letter-spacing: 0.01em; /* Optional: tweak for menu style */
-  /* keep other styles as they are */
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  font-weight:600;
+  font-size:1.05rem;
+  letter-spacing:0.01em;
 }
 .menu-link:hover {
   border-color:var(--ring); background:var(--mist);
@@ -197,7 +196,7 @@ h4{
   margin: 0 auto;
 }
 .hero-copy h2{
-  font-family:"Cormorant Garamond", serif;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   font-weight:600;
   font-size:clamp(2rem, 2.5vw + 1rem, 3rem);
   margin:.3rem 0 1rem;
@@ -242,7 +241,7 @@ h4{
 }
 .side-title{
   margin:.2rem 0 0.4rem;
-  font-family:"Cormorant Garamond", serif;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   font-weight:600;
 }
 .side-card a{
@@ -310,7 +309,7 @@ h4{
   border-radius:14px;
   cursor:pointer;
   font-weight:650;
-  font-family:"Cormorant Garamond", serif;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   letter-spacing:.01em;
   transition:all .2s ease;
   box-shadow:0 10px 24px rgba(28, 43, 40, 0.08);
@@ -346,7 +345,7 @@ h4{
 
 .resource-panel-title{
   margin:0 0 1rem;
-  font-family:"Cormorant Garamond", serif;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   font-weight:600;
 }
 
@@ -376,7 +375,7 @@ h4{
   gap:.6rem;
   font-weight:600;
   color:var(--ink);
-  font-family:"Cormorant Garamond", serif;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   letter-spacing:.01em;
 }
 
@@ -450,20 +449,20 @@ h4{
 }
 .section h2,
 .section-title{
-  font-family:"Cormorant Garamond", serif;
-  font-weight:600; margin:0 0 .8rem;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  font-weight:700; margin:0 0 .8rem;
 }
 
 .section h3{
-  font-family:"Cormorant Garamond", serif;
-  font-weight:600;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  font-weight:650;
   margin:0 0 .6rem;
   color:var(--accent);
 }
 
 .section h4{
-  font-family:"Cormorant Garamond", serif;
-  font-weight:600;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  font-weight:650;
   margin:0 0 .5rem;
   color:var(--accent);
 }
@@ -650,7 +649,7 @@ h4{
   box-shadow:0 20px 40px rgba(28, 43, 40, 0.08);
 }
 .not-found-inner h1{
-  font-family:"Cormorant Garamond", serif;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   font-size:clamp(2rem, 1.5vw + 1.5rem, 2.6rem);
   margin:0 0 1rem;
 }
@@ -722,7 +721,7 @@ h4{
 }
 
 .profile-portrait .portrait-placeholder span{
-  font-family:"Cormorant Garamond", serif;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   font-size:1.2rem;
   text-align:center;
 }
