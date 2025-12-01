@@ -75,42 +75,63 @@
           <img src="livboj_farg.png" alt="Livboj som symboliserar trygghet och stöd" width="1536" height="1024" />
         </figure>
       </div>
-      <div class="resource-accordion">
-        <details>
-          <summary>Innan en kris: Förberedelser och bedömning av kapacitet</summary>
-          <p>
-            Innan en allvarlig händelse inträffar behöver både enskilda personer och organisationer arbeta med förberedelser för att öka egen motståndskraft (resiliens). God planering, adekvat träning och utbildning kan avsevärt minska negativa effekter av en kris. Ett gott ledarskap, tydliga roller och kommunikationsvägar samt god sammanhållning i gruppen är också viktiga delar av att förbereda sig för kriser. Arbetsgivaren har också ett formellt ansvar för den psykosociala arbetsmiljön – tydliga rutiner för krisstöd bör finnas på plats redan i förväg. Nedan är en checklista över förebyggande åtgärder:
-          </p>
 
-          <details>
-            <summary>Utforma en krisplan och resurser:</summary>
+      <div class="resource-layout">
+        <div class="resource-tabs" role="tablist" aria-label="Krisstödets faser">
+          <button class="resource-tab is-active" id="tab-before" role="tab" aria-selected="true" aria-controls="panel-before" data-target="panel-before">Innan en kris</button>
+          <button class="resource-tab" id="tab-during" role="tab" aria-selected="false" aria-controls="panel-during" data-target="panel-during">Under pågående kris</button>
+          <button class="resource-tab" id="tab-after" role="tab" aria-selected="false" aria-controls="panel-after" data-target="panel-after">Efter en kris</button>
+          <button class="resource-tab" id="tab-followup" role="tab" aria-selected="false" aria-controls="panel-followup" data-target="panel-followup">Uppföljning och långsiktig psykologisk återhämtning</button>
+          <button class="resource-tab" id="tab-myths" role="tab" aria-selected="false" aria-controls="panel-myths" data-target="panel-myths">Vanliga myter om krisstöd</button>
+        </div>
+
+        <div class="resource-panels">
+          <section class="resource-panel is-active" id="panel-before" role="tabpanel" aria-labelledby="tab-before">
+            <h3 class="resource-panel-title">Innan en kris: Förberedelser och bedömning av kapacitet</h3>
             <p>
-              Säkerställ att det finns en krisberedskapsplan som beskriver roller, ansvar och rutiner för krisstöd vid allvarliga händelser. Identifiera vem som ska ge stöd (t.ex. utbildade krisstödjare, företagshälsovård) och vilka resurser som finns tillgängliga. Om interna resurser är begränsade, upprätta samarbete med externa aktörer (t.ex. kyrkan, Röda Korset, psykologer) i förväg. Genomför också en bedömning av den egna kapaciteten: finns tillräckligt med personal med rätt kompetens för att hantera kriser, eller behövs extra utbildning och stöd utifrån?
-         </p>
-            <summary>Utbildning i krisstöd (PFH m.m.):</summary>
-            <p> 
-              Ge chefer, nyckelpersoner och gärna bredare personal utbildning i grundläggande krisstöd, såsom Psykologisk första hjälp (PFH). PFH är en evidensinformerad metod för akut omhändertagande som utvecklats av experter (National Child Traumatic Stress Network m.fl.). Utbildningen lär ut hur man möter drabbade med medkänsla, tryggar deras basala behov och lugnar akuta stressreaktioner. Alla som kan komma att ge stöd bör ha goda kunskaper om krisreaktioner och PFH för att kunna agera effektivt. Även ledare och chefer bör involveras i sådan utbildning – deras agerande och attityd vid kris har stor betydelse för personalens välmående och tillit.
+              Innan en allvarlig händelse inträffar behöver både enskilda personer och organisationer arbeta med förberedelser för att öka egen motståndskraft (resiliens). God planering, adekvat träning och utbildning kan avsevärt minska negativa effekter av en kris. Ett gott ledarskap, tydliga roller och kommunikationsvägar samt god sammanhållning i gruppen är också viktiga delar av att förbereda sig för kriser. Arbetsgivaren har också ett formellt ansvar för den psykosociala arbetsmiljön – tydliga rutiner för krisstöd bör finnas på plats redan i förväg. Nedan är en checklista över förebyggande åtgärder:
             </p>
-            <summery>Stärk sammanhållning och stödjande kultur:</summery>
-            <p>
-              Bygg en organisationskultur som främjar öppenhet, socialt stöd och förtroende. En arbetsmiljö där medarbetare känner gemenskap och där det är accepterat att prata om påfrestningar bidrar till motståndskraft. Chefer bör öva på kommunikation vid kris, så att de kan förmedla lugn och stöd. Forskning på bl.a. militär personal visar att en positiv anda, gott kamratstöd och förtroendefullt ledarskap reducerar risken för psykisk ohälsa efter svåra händelser.
-            </p>
-            <summery>Förebygg stress och identifiera risker tidigt:</summery>
-            <p>
-              Hälsa och balans i vardagen är grunden – uppmuntra sunda vanor, stresshantering och att söka hjälp i tid. Organisationer bör införa rutiner för att tidigt upptäcka tecken på skadlig stress hos personalen, till exempel genom regelbundna avstämningar eller samtal. Åtgärda belastningsfaktorer i arbetsmiljön innan de leder till kronisk stress. Förebyggande insatser kan inkludera allt från stresshanteringsworkshops till stöd från företagshälsovården. Att redan i förväg öva på scenario-baserade krissituationer kan också höja beredskapen och ge individer en känsla av kontroll.
-            </p>
-            <summery>Praktiska förberedelser för individen:</summery>
-            <p>
-              Som individ kan man öka sin egen psykologiska beredskap. Att ha en personlig plan – t.ex. veta vem man skulle kontakta vid en kris, och ha basala nödförnödenheter – ger trygghet. Se över dina coping-strategier: vad har hjälpt dig hantera svår stress tidigare? Öva på avslappningstekniker eller andningsövningar i lugna situationer, så att du kan använda dem om något inträffar. Ett robust socialt nätverk är också en skyddsfaktor; stärk relationer med familj och vänner som utgör ditt personliga stöd vid kriser.
-            </p>
-            
+
+            <div class="resource-subaccordion">
+              <details>
+                <summary>Utforma en krisplan och resurser:</summary>
+                <p>
+                  Säkerställ att det finns en krisberedskapsplan som beskriver roller, ansvar och rutiner för krisstöd vid allvarliga händelser. Identifiera vem som ska ge stöd (t.ex. utbildade krisstödjare, företagshälsovård) och vilka resurser som finns tillgängliga. Om interna resurser är begränsade, upprätta samarbete med externa aktörer (t.ex. kyrkan, Röda Korset, psykologer) i förväg. Genomför också en bedömning av den egna kapaciteten: finns tillräckligt med personal med rätt kompetens för att hantera kriser, eller behövs extra utbildning och stöd utifrån?
+                </p>
+              </details>
+              <details>
+                <summary>Utbildning i krisstöd (PFH m.m.):</summary>
+                <p>
+                  Ge chefer, nyckelpersoner och gärna bredare personal utbildning i grundläggande krisstöd, såsom Psykologisk första hjälp (PFH). PFH är en evidensinformerad metod för akut omhändertagande som utvecklats av experter (National Child Traumatic Stress Network m.fl.). Utbildningen lär ut hur man möter drabbade med medkänsla, tryggar deras basala behov och lugnar akuta stressreaktioner. Alla som kan komma att ge stöd bör ha goda kunskaper om krisreaktioner och PFH för att kunna agera effektivt. Även ledare och chefer bör involveras i sådan utbildning – deras agerande och attityd vid kris har stor betydelse för personalens välmående och tillit.
+                </p>
+              </details>
+              <details>
+                <summary>Stärk sammanhållning och stödjande kultur:</summary>
+                <p>
+                  Bygg en organisationskultur som främjar öppenhet, socialt stöd och förtroende. En arbetsmiljö där medarbetare känner gemenskap och där det är accepterat att prata om påfrestningar bidrar till motståndskraft. Chefer bör öva på kommunikation vid kris, så att de kan förmedla lugn och stöd. Forskning på bl.a. militär personal visar att en positiv anda, gott kamratstöd och förtroendefullt ledarskap reducerar risken för psykisk ohälsa efter svåra händelser.
+                </p>
+              </details>
+              <details>
+                <summary>Förebygg stress och identifiera risker tidigt:</summary>
+                <p>
+                  Hälsa och balans i vardagen är grunden – uppmuntra sunda vanor, stresshantering och att söka hjälp i tid. Organisationer bör införa rutiner för att tidigt upptäcka tecken på skadlig stress hos personalen, till exempel genom regelbundna avstämningar eller samtal. Åtgärda belastningsfaktorer i arbetsmiljön innan de leder till kronisk stress. Förebyggande insatser kan inkludera allt från stresshanteringsworkshops till stöd från företagshälsovården. Att redan i förväg öva på scenario-baserade krissituationer kan också höja beredskapen och ge individer en känsla av kontroll.
+                </p>
+              </details>
+              <details>
+                <summary>Praktiska förberedelser för individen:</summary>
+                <p>
+                  Som individ kan man öka sin egen psykologiska beredskap. Att ha en personlig plan – t.ex. veta vem man skulle kontakta vid en kris, och ha basala nödförnödenheter – ger trygghet. Se över dina coping-strategier: vad har hjälpt dig hantera svår stress tidigare? Öva på avslappningstekniker eller andningsövningar i lugna situationer, så att du kan använda dem om något inträffar. Ett robust socialt nätverk är också en skyddsfaktor; stärk relationer med familj och vänner som utgör ditt personliga stöd vid kriser.
+                </p>
+              </details>
+            </div>
+
             <p>
               Genom goda förberedelser ökar chanserna att både organisation och individer står rustade när en allvarlig händelse inträffar, vilket i slutändan kan mildra krisens följder.
             </p>
-          </details>
+          </section>
 
-          <details>
-            <summary>Under en pågående kris: Akuta insatser och stöd</summary>
+          <section class="resource-panel" id="panel-during" role="tabpanel" aria-labelledby="tab-during" hidden>
+            <h3 class="resource-panel-title">Under en pågående kris: Akuta insatser och stöd</h3>
             <p>
               När en kris eller allvarlig händelse precis inträffat – det kan röra sig om en olycka, ett våldsamt angrepp, en naturkatastrof etc – befinner sig människor i ett akut stress- och chocktillstånd. Det primära målet under denna fas är att trygga överlevnad och säkerhet samt att ge praktiskt och medmänskligt stöd som kan lindra omedelbar nöd. Internationella riktlinjer betonar att insatser i akutfasen ska fokusera på grundläggande behov och psykologisk första hjälp, snarare än terapeutiska insatser eller tvingande samtal. Samtidigt behöver insatspersonal tas omhand så att de kan fortsätta fungera under press. Här är centrala principer och en checklista för akuta krisåtgärder:
             </p>
@@ -134,10 +155,10 @@
             <p>
               Att följa dessa riktlinjer under det akuta skedet skapar bästa möjliga förutsättningar för att omedelbar nöd lindras och att de drabbade känner sig sedda, trygga och hoppfulla trots det som inträffat. Akut krisstöd handlar i grunden om medmänsklighet och praktisk hjälp – att “låna ut sin trygghet” tills personens egna krafter hinner ikapp den första chocken.
             </p>
-          </details>
+          </section>
 
-          <details>
-            <summary>Efter en kris: Tidig återhämtning och fortsatta stödinsatser</summary>
+          <section class="resource-panel" id="panel-after" role="tabpanel" aria-labelledby="tab-after" hidden>
+            <h3 class="resource-panel-title">Efter en kris: Tidig återhämtning och fortsatta stödinsatser</h3>
             <p>
               När den akuta krisen har passerat och det omedelbara hotet är över, går krisarbetet in i en ny fas. Fokus skiftar från ren överlevnad till återhämtning – att hjälpa drabbade att bearbeta det inträffade, återgå till vardagen i den mån det går, och förebygga långvariga problem. I detta skede (dagarna och veckorna efter händelsen) är det viktigt att fortsätta ge socialt stöd och praktisk hjälp, erbjuda psykoedukation om vanliga reaktioner samt identifiera de personer som kan behöva mer riktat stöd.
             </p>
@@ -161,10 +182,10 @@
             <p>
               Sammanfattningsvis: tiden efter en kris kräver balans mellan att inte patologisera normala reaktioner och att fånga upp dem som behöver extra hjälp. De flesta börjar må bättre inom några veckor med hjälp av familj/vänner och grundläggande stödinsatser. Men en del kan behöva mer, vilket leder in på nästa avsnitt – uppföljning och rehabilitering.
             </p>
-          </details>
+          </section>
 
-          <details>
-            <summary>Uppföljning och långsiktig psykologisk återhämtning</summary>
+          <section class="resource-panel" id="panel-followup" role="tabpanel" aria-labelledby="tab-followup" hidden>
+            <h3 class="resource-panel-title">Uppföljning och långsiktig psykologisk återhämtning</h3>
             <p>
               Uppföljning innebär att man efter en tid systematiskt kontrollerar hur de drabbade och involverade mår, för att kunna sätta in riktade insatser vid behov. Detta är en kritisk del av krisstödet: många allvarliga stressreaktioner klingar av inom 1–3 månader, men om de inte gör det kan professionell hjälp behövas. Socialstyrelsen rekommenderar exempelvis att man cirka en månad efter händelsen genomför en screening av högriskindivider med ett enkelt självskattningsformulär.
             </p>
@@ -188,10 +209,10 @@
             <p>
               Sammanfattningsvis innebär uppföljningsfasen att hålla ett öga på de långsiktiga följderna och sätta in evidensbaserade insatser där det behövs. Genom screening och tidiga interventioner kan man förhindra att onödigt lidande fortgår obehandlat.
             </p>
-          </details>
+          </section>
 
-          <details>
-            <summary>Debriefing och vanliga myter om krisstöd: Vad säger forskningen?</summary>
+          <section class="resource-panel" id="panel-myths" role="tabpanel" aria-labelledby="tab-myths" hidden>
+            <h3 class="resource-panel-title">Debriefing och vanliga myter om krisstöd: Vad säger forskningen?</h3>
             <p>
               Kring krisstöd florerar flera myter och missuppfattningar. Det är viktigt att räta ut dessa frågetecken så att stödinsatserna som ges verkligen gör nytta. Nedan adresseras några vanliga påståenden – och vad aktuell forskning och riktlinjer säger i verkligheten:
             </p>
@@ -221,8 +242,8 @@
             <p>
               <strong>Källor:</strong> Sammanställningen bygger på Socialstyrelsens kunskapsunderlag "Krisstöd vid allvarlig händelse (2018)", "Skills for Psychological Recovery: Field Operations Guide (2019)"-svensk version, "Psychological First Aid: Field Operations Guide 2nd Edition (2006)"-svensk version, “Trauma and stress 2.1- Support and follow-up of exposed individuals and operational personnel, Per-Olof Michel (2025)”, samt Arbetsmiljöverkets föreskrifter och allmäna råd om planering och organisering av arbetsmiljöarbete (AFS 2023:2) Kap 4. Första hjälpen och krisstöd.
             </p>
-          </details>
-        </details>
+          </section>
+        </div>
       </div>
     </div>
   </section>
@@ -232,5 +253,34 @@
   <p>Senast uppdaterad: 2025-12-01</p>
 </footer>
 
+<script>
+  const resourceTabs = document.querySelectorAll('.resource-tab');
+  const resourcePanels = document.querySelectorAll('.resource-panel');
+
+  resourceTabs.forEach((tab) => {
+    const isActive = tab.classList.contains('is-active');
+    tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    tab.tabIndex = isActive ? 0 : -1;
+  });
+
+  resourceTabs.forEach((button) => {
+    button.addEventListener('click', () => {
+      const targetId = button.dataset.target;
+
+      resourceTabs.forEach((tab) => {
+        const isActive = tab === button;
+        tab.classList.toggle('is-active', isActive);
+        tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        tab.tabIndex = isActive ? 0 : -1;
+      });
+
+      resourcePanels.forEach((panel) => {
+        const isTarget = panel.id === targetId;
+        panel.hidden = !isTarget;
+        panel.classList.toggle('is-active', isTarget);
+      });
+    });
+  });
+</script>
 </body>
 </html>
