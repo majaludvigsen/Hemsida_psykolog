@@ -289,13 +289,80 @@ h4{
   color:var(--accent);
 }
 
-.resource-accordion{
+
+.resource-layout{
+  margin-top:2rem;
+  display:flex;
+  flex-direction:column;
+  gap:1.25rem;
+}
+
+.resource-tabs{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  gap:.75rem;
+  width:100%;
+}
+
+.resource-tab{
+  border:1px solid #dfe8e4;
+  background:linear-gradient(180deg, #f9fcfa 0%, #ffffff 100%);
+  color:var(--ink);
+  padding:.8rem 1rem;
+  border-radius:14px;
+  cursor:pointer;
+  font-weight:650;
+  font-family:"Cormorant Garamond", serif;
+  letter-spacing:.01em;
+  transition:all .2s ease;
+  box-shadow:0 10px 24px rgba(28, 43, 40, 0.08);
+  text-align:center;
+  width:100%;
+}
+
+.resource-tab:hover{
+  border-color:var(--ring);
+}
+
+.resource-tab.is-active{
+  background:linear-gradient(160deg, #e9f3ee 0%, #ffffff 100%);
+  border-color:var(--ring);
+  box-shadow:0 14px 30px rgba(28, 43, 40, 0.12);
+}
+
+.resource-panels{
+  display:flex;
+  flex-direction:column;
+  gap:1.2rem;
+}
+
+.resource-panel{
+  border:1px solid #dfe8e4;
+  border-radius:18px;
+  background:linear-gradient(180deg, #f9fcfa 0%, #ffffff 100%);
+  box-shadow:0 12px 30px rgba(28, 43, 40, 0.08);
+  padding:1.4rem 1.5rem 1.5rem;
+}
+
+.resource-panel[hidden]{
+  display:none;
+}
+
+.resource-panel-title{
+  margin:0 0 1rem;
+  font-family:"Cormorant Garamond", serif;
+  font-weight:600;
+}
+
+.resource-accordion,
+.resource-subaccordion{
   margin-top:2rem;
   display:grid;
   gap:1.1rem;
 }
 
-.resource-accordion details{
+.resource-accordion details,
+.resource-subaccordion details{
   border:1px solid #dfe8e4;
   border-radius:18px;
   background:linear-gradient(180deg, #f9fcfa 0%, #ffffff 100%);
@@ -303,7 +370,8 @@ h4{
   overflow:hidden;
 }
 
-.resource-accordion summary{
+.resource-accordion summary,
+.resource-subaccordion summary{
   list-style:none;
   padding:1rem 1.2rem;
   cursor:pointer;
@@ -316,17 +384,21 @@ h4{
   letter-spacing:.01em;
 }
 
-.resource-accordion summary::marker{ content:""; }
+.resource-accordion summary::marker,
+.resource-subaccordion summary::marker{ content:""; }
 
-.resource-accordion summary:focus-visible{
+.resource-accordion summary:focus-visible,
+.resource-subaccordion summary:focus-visible{
   outline:3px solid var(--ring);
   outline-offset:4px;
   border-radius:12px;
 }
 
-.resource-accordion summary::-webkit-details-marker{ display:none; }
+.resource-accordion summary::-webkit-details-marker,
+.resource-subaccordion summary::-webkit-details-marker{ display:none; }
 
-.resource-accordion summary::after{
+.resource-accordion summary::after,
+.resource-subaccordion summary::after{
   content:"+";
   margin-left:auto;
   font-weight:700;
@@ -334,39 +406,49 @@ h4{
   transition:transform .2s ease;
 }
 
-.resource-accordion details[open] summary::after{
+.resource-accordion details[open] summary::after,
+.resource-subaccordion details[open] summary::after{
   content:"–";
   transform:translateY(-1px);
 }
 
-.resource-accordion details > *:not(summary){
+.resource-accordion details > *:not(summary),
+.resource-subaccordion details > *:not(summary){
   padding:0 1.2rem 1.2rem;
 }
 
 .resource-accordion p,
+.resource-subaccordion p,
 .resource-accordion ul,
-.resource-accordion ol{
+.resource-subaccordion ul,
+.resource-accordion ol,
+.resource-subaccordion ol{
   margin-bottom:1.4rem;
 }
 
 .resource-accordion ul,
-.resource-accordion ol{
+.resource-subaccordion ul,
+.resource-accordion ol,
+.resource-subaccordion ol{
   padding-left:1.25rem;
 }
 
-.resource-accordion details details{
+.resource-accordion details details,
+.resource-subaccordion details details{
   margin:1rem .6rem 0;
   background:#ffffff;
   box-shadow:none;
   border-color:#e8f0ec;
 }
 
-.resource-accordion details details summary{
+.resource-accordion details details summary,
+.resource-subaccordion details details summary{
   padding:0.9rem 1rem;
   font-size:1.05rem;
 }
 
-.resource-accordion details[open]{
+.resource-accordion details[open],
+.resource-subaccordion details[open]{
   border-color:var(--ring);
   box-shadow:0 16px 34px rgba(28, 43, 40, 0.12);
 }
