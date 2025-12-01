@@ -52,12 +52,10 @@ h4{
   align-items:center;
   justify-content:space-between;
   gap:1rem;
-  padding:.3rem 8vw;
+  padding:.3rem 1.0rem;
   background:var(--paper);
   border-bottom:1px solid #dfe8e4;
   color:var(--ink);
-  max-width:1080px;
-  margin:0 auto;
 }
 
 .brand{
@@ -180,7 +178,7 @@ h4{
 .hero-inner{
   max-width:1080px;
   margin:0 auto;
-  padding:3rem 8vw;
+  padding:3rem 3vw 3rem 8vw;
   display:grid;
   gap:2rem;
   align-items:center;
@@ -265,9 +263,7 @@ h4{
 }
 .section.alt{ background:#f7faf8; }
 .section-inner{
-  max-width:1080px;
-  margin:0 auto;
-  padding:3rem 8vw;
+  max-width:960px; margin:0 auto; padding:3rem 8vw;
 }
 .resource-intro{
   display:grid;
