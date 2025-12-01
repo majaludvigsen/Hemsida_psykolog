@@ -288,6 +288,88 @@ h4{
   font-size:.95rem;
   color:var(--accent);
 }
+
+.resource-accordion{
+  margin-top:2rem;
+  display:grid;
+  gap:1.1rem;
+}
+
+.resource-accordion details{
+  border:1px solid #dfe8e4;
+  border-radius:18px;
+  background:linear-gradient(180deg, #f9fcfa 0%, #ffffff 100%);
+  box-shadow:0 12px 30px rgba(28, 43, 40, 0.08);
+  overflow:hidden;
+}
+
+.resource-accordion summary{
+  list-style:none;
+  padding:1rem 1.2rem;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  font-weight:600;
+  color:var(--ink);
+  font-family:"Cormorant Garamond", serif;
+  letter-spacing:.01em;
+}
+
+.resource-accordion summary::marker{ content:""; }
+
+.resource-accordion summary:focus-visible{
+  outline:3px solid var(--ring);
+  outline-offset:4px;
+  border-radius:12px;
+}
+
+.resource-accordion summary::-webkit-details-marker{ display:none; }
+
+.resource-accordion summary::after{
+  content:"+";
+  margin-left:auto;
+  font-weight:700;
+  color:var(--accent);
+  transition:transform .2s ease;
+}
+
+.resource-accordion details[open] summary::after{
+  content:"–";
+  transform:translateY(-1px);
+}
+
+.resource-accordion details > *:not(summary){
+  padding:0 1.2rem 1.2rem;
+}
+
+.resource-accordion p,
+.resource-accordion ul,
+.resource-accordion ol{
+  margin-bottom:1.4rem;
+}
+
+.resource-accordion ul,
+.resource-accordion ol{
+  padding-left:1.25rem;
+}
+
+.resource-accordion details details{
+  margin:1rem .6rem 0;
+  background:#ffffff;
+  box-shadow:none;
+  border-color:#e8f0ec;
+}
+
+.resource-accordion details details summary{
+  padding:0.9rem 1rem;
+  font-size:1.05rem;
+}
+
+.resource-accordion details[open]{
+  border-color:var(--ring);
+  box-shadow:0 16px 34px rgba(28, 43, 40, 0.12);
+}
 .section h2,
 .section-title{
   font-family:"Cormorant Garamond", serif;
