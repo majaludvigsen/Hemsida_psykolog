@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="En enkel shop för digitala resurser från Maja Ludvigsen." />
+  <title>Shop</title>
+  <link rel="canonical" href="https://www.majaludvigsen.com/shop.html" />
+  <link rel="icon" href="header-logo.png" type="image/png" />
+  <meta property="og:site_name" content="Maja Ludvigsen" />
+  <meta property="og:title" content="Shop – Maja Ludvigsen" />
+  <meta property="og:description" content="En enkel shop för digitala resurser från Maja Ludvigsen." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.majaludvigsen.com/shop.html" />
+  <meta property="og:image" content="https://www.majaludvigsen.com/header-logo.png" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shop – Maja Ludvigsen" />
+  <meta name="twitter:description" content="En enkel shop för digitala resurser från Maja Ludvigsen." />
+  <meta name="twitter:image" content="https://www.majaludvigsen.com/header-logo.png" />
+  <meta name="twitter:image:alt" content="Maja Ludvigsen – Leg. psykolog &amp; organisationskonsult" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="header-decor">
+    <img class="header-logo" src="header-logo.png" alt="Turkos vågform" width="160" height="160" />
+    <h1 class="site-title">Maja Ludvigsen</h1>
+  </div>
+
+  <nav class="nav">
+    <ul class="menu">
+      <li><a href="index.html" class="menu-link">Hem</a></li>
+      <li><a href="om-mig.html" class="menu-link">Om mig</a></li>
+      <li><a href="tjanster.html" class="menu-link">Tjänster</a></li>
+      <li><a href="sjofart.html" class="menu-link">Sjöfart</a></li>
+      <li><a href="resurser.html" class="menu-link">Resurser</a></li>
+      <li><a href="shop.html" class="menu-link" aria-current="page">Shop</a></li>
+      <li><a href="kontakt.html" class="menu-link">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Öppna meny">
+  <label for="nav-toggle" class="hamburger" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="mobile-drawer">
+    <a href="index.html" class="menu-link">Hem</a>
+    <a href="om-mig.html" class="menu-link">Om mig</a>
+    <a href="tjanster.html" class="menu-link">Tjänster</a>
+    <a href="sjofart.html" class="menu-link">Sjöfart</a>
+    <a href="resurser.html" class="menu-link">Resurser</a>
+    <a href="shop.html" class="menu-link" aria-current="page">Shop</a>
+    <a href="kontakt.html" class="menu-link">Kontakt</a>
+  </nav>
+</header>
+
+<hr class="divider" aria-hidden="true">
+
+<main>
+  <section class="section alt" aria-labelledby="shop-title">
+    <div class="section-inner shop-layout">
+      <div>
+        <h2 id="shop-title">Shop</h2>
+        <p class="section-lead">En enkel butik där du framöver kan köpa digitala resurser och material.</p>
+      </div>
+
+      <article class="shop-card" aria-labelledby="product-title">
+        <h3 id="product-title">Reflektionsguide för hållbart arbetsliv</h3>
+        <p>En kort digital guide med reflektionsfrågor för team och ledare.</p>
+        <p class="shop-price">149 kr</p>
+        <button class="cta shop-buy" id="checkout-button" type="button">Betala med Stripe</button>
+        <p class="shop-note">Stripe är förberett men kräver public key och server-endpoint innan köpflödet är aktivt.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>Senast uppdaterad: 2026-04-20</p>
+</footer>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  (function () {
+    var publishableKey = window.STRIPE_PUBLISHABLE_KEY || "";
+    var checkoutButton = document.getElementById("checkout-button");
+
+    checkoutButton.addEventListener("click", async function () {
+      if (!publishableKey) {
+        alert("Stripe är inte färdigkonfigurerat ännu. Lägg till STRIPE_PUBLISHABLE_KEY för att aktivera checkout.");
+        return;
+      }
+
+      var stripe = Stripe(publishableKey);
+      try {
+        var response = await fetch("/api/create-checkout-session", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ productId: "reflektionsguide" })
+        });
+
+        if (!response.ok) throw new Error("Kunde inte skapa checkout-session.");
+
+        var data = await response.json();
+        await stripe.redirectToCheckout({ sessionId: data.sessionId });
+      } catch (error) {
+        alert("Kunde inte starta Stripe Checkout just nu.");
+        console.error(error);
+      }
+    });
+  })();
+</script>
+</body>
+</html>
