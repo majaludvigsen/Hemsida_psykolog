@@ -959,3 +959,34 @@ h4{
     gap:1.25rem;
   }
 }
+
+.shop-layout{
+  display:grid;
+  gap:2rem;
+}
+
+.shop-card{
+  background:var(--paper);
+  border:1px solid #dfe8e4;
+  border-radius:18px;
+  padding:1.5rem;
+  box-shadow:0 12px 24px rgba(28, 43, 40, 0.05);
+  max-width:540px;
+}
+
+.shop-price{
+  font-family:"Cormorant Garamond", serif;
+  font-size:2rem;
+  color:var(--accent);
+  margin:.25rem 0 1rem;
+}
+
+.shop-buy{
+  margin-top:0;
+}
+
+.shop-note{
+  margin-top:1rem;
+  color:#4b6058;
+  font-size:.95rem;
+}
